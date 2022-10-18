@@ -19,18 +19,18 @@
   </head>
   <body>
     <nav class="nav">
-      <ul>
-        <li><a href="#about-me">ОБО МНЕ</a></li>
-        <li><a href="#services">УСЛУГИ</a></li>
-        <li><a href="#portfolio">РАБОТЫ</a></li>
-        <li><a href="#contacts">КОНТАКТЫ</a></li>
-      </ul>
+        <ul>
+            <li><a href="#about-me">ОБО МНЕ</a></li>
+            <li><a href="#services">УСЛУГИ</a></li>
+            <li><a href="#portfolio">РАБОТЫ</a></li>
+            <li><a class="last" href="#contacts">КОНТАКТЫ</a></li>
+          </ul>
     </nav>
-    <header class="header">
+    <header id="about-me" class="header">
       <div class="container">
         <div class="wrapper">
           <div class="title">
-            <h1 id="about-me">
+            <h1>
               Привет! <br />
               Меня зовут <span>Диана</span>. <br />
               Я <span>UX UI</span> Дизайнер.
@@ -44,20 +44,20 @@
                 ><a href="#"><img src="./img/icon/mail-outline.svg" alt="" /></a
               ></span>
             </div>
+            <div class="sub-title">
+                <h3>Что я могу</h3>
+                <p>
+                  Люблю составлять карты пользователя, проектировать экран за
+                  экраном и разбирать шаги пользователя до мелочей, чтобы раскрыть
+                  самые боли и радости клиента при взаимодействии с продуктом.
+                </p>
+              </div>
           </div>
-          <div class="header__foto">
-            <img src="#" alt="header__foto" />
+          <div class="header__photo">
+            <img src="./img/header-photo.png" alt="header__photo" />
           </div>
         </div>
-        <div class="tech-skills">
-          <div class="title">
-            <h3 id="services">Что я могу</h3>
-            <p>
-              Люблю составлять карты пользователя, проектировать экран за
-              экраном и разбирать шаги пользователя до мелочей, чтобы раскрыть
-              самые боли и радости клиента при взаимодействии с продуктом.
-            </p>
-          </div>
+        <div id="services" class="tech-skills">
           <div class="items">
             <div class="item">
               <div class="item-img">
@@ -88,10 +88,10 @@
         </div>
       </div>
     </header>
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
       <div class="container">
         <div class="wrapper-title">
-          <h2 id="portfolio">МОИ РАБОТЫ</h2>
+          <h2>МОИ РАБОТЫ</h2>
           <ul id="tabs" class="tabs-wrapper">
             <li class="tab-btn active" data-btn="1">Все</li>
             <li class="tab-btn" data-btn="2">Продуктовый дизайн</li>
@@ -103,6 +103,34 @@
       </div>
       <div class="swiper">
         <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="portfolio-item">
+                <div class="item-img">
+                    <img src="./img/empowering.jpg" alt="empowering">
+                </div>
+                <div class="title">
+                    <p>Genius Academy</p>
+                    <div class="links">
+                        <span class="category">Продуктовый дизайн</span>
+                        <a href="#"><img src="./img/icon/arrow-right.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="portfolio-item">
+                <div class="item-img">
+                    <img src="./img/empowering.jpg" alt="empowering">
+                </div>
+                <div class="title">
+                    <p>Genius Academy</p>
+                    <div class="links">
+                        <span class="category">Продуктовый дизайн</span>
+                        <a href="#"><img src="./img/icon/arrow-right.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+          </div>
           <div class="swiper-slide">
             <div class="portfolio-item">
                 <div class="item-img">
@@ -193,9 +221,9 @@
           </li>
         </ul>
       </div>
-      <section class="contacts">
+      <section id="contacts" class="contacts">
         <div class="container-small">
-          <h2 id="contacts">
+          <h2>
             Если вы хотите поработать со мной, нанять для проекта или просто
             поздороваться
           </h2>
@@ -215,6 +243,7 @@
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="slider.js"></script>
+    <script src="tabs.js"></script>
   </body>
 </html>

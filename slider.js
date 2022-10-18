@@ -1,14 +1,15 @@
 const swiper = new Swiper(".swiper", {
   // Optional parameters
-  loop: true,
-      // If we need pagination
-
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
   // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-
+  slidesPerView: "auto",
   // Responsive breakpoints
   breakpoints: {
     // when window width is >= 320px
@@ -23,16 +24,8 @@ const swiper = new Swiper(".swiper", {
     },
     // when window width is >= 640px
     640: {
-      slidesPerView: 3,
-      spaceBetween: 40,
-      
-    },
-    1024: {
       slidesPerView: 4,
-      spaceBetween: 40,
-      pagination: {
-        el: ".swiper-pagination",
-      },
+      spaceBetween: 50,
     },
   },
 });

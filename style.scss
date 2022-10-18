@@ -5,7 +5,7 @@ $other: rgba(13, 87, 135, 0.6);
 $blue: #52bbff;
 $blue-light: #a5dcff;
 $container: 1216px;
-$transition: 0.3s;
+$transition: 0.4s;
 body {
     box-sizing: border-box;
     font-family: "Jura", sans-serif;
@@ -58,13 +58,13 @@ h3 {
 .nav {
     position: fixed;
     z-index: 100;
-    background: $primary;
     width: 100%;
     ul {
         display: flex;
         align-items: center;
         height: 125px;
         width: 100%;
+
         li {
             height: 100%;
             display: flex;
@@ -73,6 +73,8 @@ h3 {
             font-size: 20px;
             line-height: 24px;
             flex-shrink: 0;
+            background: $seconady;
+
             transition: background-color $transition;
             a {
                 color: #fff;
@@ -89,19 +91,29 @@ h3 {
                 flex-basis: 70%;
             }
             &:hover {
-                background: $other;
-                &:last-child {
-                    background: linear-gradient(
-                        89.96deg,
-                        #18608e 38.59%,
-                        #185a86 50.51%,
-                        #1a394f 69.09%,
-                        #1b2b37 84.87%
-                    );
-                }
+                background: transparent;
+
                 a {
                     color: $blue;
+                    position: relative;
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        background: $blue;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 100%;
+                        top: 65%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                    &.last{
+                        &::after{
+                            left: 4%;
+                        }
+                    }
                 }
+                
             }
         }
     }
@@ -114,9 +126,9 @@ h3 {
     background-position: bottom right;
     .wrapper {
         display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-bottom: 140px;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: nowrap;
         .title {
             flex-basis: 60%;
             h1 {
@@ -142,9 +154,24 @@ h3 {
                 display: flex;
                 align-items: center;
                 gap: 33px;
+                margin-bottom: 140px;
+            }
+            .sub-title {
+                margin-bottom: 58px;
+                h3 {
+                    margin-bottom: 25px;
+                }
+                p {
+                    font-weight: 500;
+                    font-size: 22px;
+                    line-height: 28px;
+                }
             }
         }
-        .header__foto {
+        .header__photo {
+            position: relative;
+            left: 39px;
+            top: 3px;
             flex-basis: auto;
             img {
                 width: 100%;
@@ -152,18 +179,6 @@ h3 {
         }
     }
     .tech-skills {
-        .title {
-            margin-bottom: 58px;
-            max-width: 57%;
-            h3 {
-                margin-bottom: 25px;
-            }
-            p {
-                font-weight: 500;
-                font-size: 22px;
-                line-height: 28px;
-            }
-        }
         .items {
             display: flex;
             justify-content: space-between;
@@ -228,8 +243,25 @@ h3 {
             }
         }
     }
-    .swiper{
-        margin-left: calc((100vw - $container)/2);
+    .swiper {
+        margin-left: calc((100vw - $container) / 2);
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        top: 10%;
+        width: 68px;
+        height: 48px;
+    }
+    .swiper-button-next {
+        content: url(./img/icon/btn-next.svg);
+        right: auto;
+        left: 90px;
+    }
+    .swiper-button-prev {
+        content: url(./img/icon/btn-prev.svg);
+    }
+    .swiper-pagination {
+        display: none;
     }
     .swiper-wrapper {
         margin-top: 128px;
@@ -239,7 +271,7 @@ h3 {
                 border-radius: 40px;
                 overflow: hidden;
                 .item-img {
-                    img{
+                    img {
                         width: 100%;
                     }
                 }
@@ -339,13 +371,14 @@ h3 {
         }
         .contacts-wrapper {
             display: flex;
+            align-items: center;
             gap: 100px;
             p {
                 font-size: 20px;
                 line-height: 24px;
             }
             a {
-                font-size: 50px;
+                font-size: 34px;
                 line-height: 59px;
                 color: $blue-light;
             }
