@@ -5,6 +5,7 @@ $other: rgba(13, 87, 135, 0.6);
 $blue: #52bbff;
 $blue-light: #a5dcff;
 $container: 1216px;
+$transition: 0.3s;
 body {
     box-sizing: border-box;
     font-family: "Jura", sans-serif;
@@ -13,6 +14,7 @@ body {
     margin: 0;
     padding: 0;
     background: $primary;
+    scroll-behavior: smooth;
 }
 .container {
     max-width: $container;
@@ -71,21 +73,33 @@ h3 {
             font-size: 20px;
             line-height: 24px;
             flex-shrink: 0;
+            transition: background-color $transition;
             a {
                 color: #fff;
+                display: flex;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+                transition: $transition;
             }
             &:first-child {
                 padding-left: calc((100vw - $container) / 2);
             }
-            &:last-child{
+            &:last-child {
                 flex-basis: 70%;
             }
-            &.active{
+            &:hover {
                 background: $other;
-                &:last-child{
-                    background: linear-gradient(89.96deg, #18608E 38.59%, #185A86 50.51%, #1A394F 69.09%, #1B2B37 84.87%);
+                &:last-child {
+                    background: linear-gradient(
+                        89.96deg,
+                        #18608e 38.59%,
+                        #185a86 50.51%,
+                        #1a394f 69.09%,
+                        #1b2b37 84.87%
+                    );
                 }
-                a{
+                a {
                     color: $blue;
                 }
             }
@@ -165,8 +179,8 @@ h3 {
                 align-items: center;
                 gap: 30px;
                 flex-basis: 100%;
-                .item-img {
-                }
+                // .item-img {
+                // }
                 .item-text {
                     font-size: 28px;
                 }
@@ -192,8 +206,68 @@ h3 {
     }
 }
 .portfolio {
-    height: 700px;
-    background: grey;
+    background: rgba(14, 29, 38, 0.33);
+    padding: 112px 0;
+    .wrapper-title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 26px;
+        justify-content: space-between;
+        .tabs-wrapper {
+            display: flex;
+            gap: 52px;
+            font-size: 20px;
+            line-height: 24px;
+            align-items: center;
+            li {
+                cursor: pointer;
+                transition: $transition;
+                &.active {
+                    color: $blue;
+                }
+            }
+        }
+    }
+    .swiper{
+        margin-left: calc((100vw - $container)/2);
+    }
+    .swiper-wrapper {
+        margin-top: 128px;
+        .swiper-slide {
+            .portfolio-item {
+                background: $primary;
+                border-radius: 40px;
+                overflow: hidden;
+                .item-img {
+                    img{
+                        width: 100%;
+                    }
+                }
+                .title {
+                    padding: 33px 39px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    p {
+                        margin-bottom: 20px;
+                        font-size: 20px;
+                        line-height: 27px;
+                    }
+                    .links {
+                        display: flex;
+                        justify-content: space-between;
+                        .category {
+                            font-size: 14px;
+                            line-height: 17px;
+                            padding: 10px 22px;
+                            border-radius: 100px;
+                            background: $blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 .about {
     padding-top: 115px;
@@ -275,7 +349,6 @@ h3 {
                 line-height: 59px;
                 color: $blue-light;
             }
-            
         }
     }
 }

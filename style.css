@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   background: #21313e;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -73,9 +74,15 @@ h3 {
   font-size: 20px;
   line-height: 24px;
   flex-shrink: 0;
+  transition: background-color 0.3s;
 }
 .nav ul li a {
   color: #fff;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  transition: 0.3s;
 }
 .nav ul li:first-child {
   padding-left: calc((100vw - 1216px) / 2);
@@ -83,13 +90,13 @@ h3 {
 .nav ul li:last-child {
   flex-basis: 70%;
 }
-.nav ul li.active {
+.nav ul li:hover {
   background: rgba(13, 87, 135, 0.6);
 }
-.nav ul li.active:last-child {
-  background: linear-gradient(89.96deg, #18608E 38.59%, #185A86 50.51%, #1A394F 69.09%, #1B2B37 84.87%);
+.nav ul li:hover:last-child {
+  background: linear-gradient(89.96deg, #18608e 38.59%, #185a86 50.51%, #1a394f 69.09%, #1b2b37 84.87%);
 }
-.nav ul li.active a {
+.nav ul li:hover a {
   color: #52bbff;
 }
 
@@ -189,8 +196,64 @@ h3 {
 }
 
 .portfolio {
-  height: 700px;
-  background: grey;
+  background: rgba(14, 29, 38, 0.33);
+  padding: 112px 0;
+}
+.portfolio .wrapper-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
+  justify-content: space-between;
+}
+.portfolio .wrapper-title .tabs-wrapper {
+  display: flex;
+  gap: 52px;
+  font-size: 20px;
+  line-height: 24px;
+  align-items: center;
+}
+.portfolio .wrapper-title .tabs-wrapper li {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.portfolio .wrapper-title .tabs-wrapper li.active {
+  color: #52bbff;
+}
+.portfolio .swiper {
+  margin-left: calc((100vw - 1216px) / 2);
+}
+.portfolio .swiper-wrapper {
+  margin-top: 128px;
+}
+.portfolio .swiper-wrapper .swiper-slide .portfolio-item {
+  background: #21313e;
+  border-radius: 40px;
+  overflow: hidden;
+}
+.portfolio .swiper-wrapper .swiper-slide .portfolio-item .item-img img {
+  width: 100%;
+}
+.portfolio .swiper-wrapper .swiper-slide .portfolio-item .title {
+  padding: 33px 39px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.portfolio .swiper-wrapper .swiper-slide .portfolio-item .title p {
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 27px;
+}
+.portfolio .swiper-wrapper .swiper-slide .portfolio-item .title .links {
+  display: flex;
+  justify-content: space-between;
+}
+.portfolio .swiper-wrapper .swiper-slide .portfolio-item .title .links .category {
+  font-size: 14px;
+  line-height: 17px;
+  padding: 10px 22px;
+  border-radius: 100px;
+  background: #52bbff;
 }
 
 .about {
