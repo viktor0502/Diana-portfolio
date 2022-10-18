@@ -69,35 +69,33 @@ h3 {
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 0 26px;
   font-size: 20px;
   line-height: 24px;
   flex-shrink: 0;
-  background: rgba(14, 29, 38, 0.6);
   transition: background-color 0.4s;
 }
+.nav ul li:last-child {
+  flex: 1 1 100%;
+}
+.nav ul li:first-child a {
+  padding-left: calc((100vw - 1216px) / 2);
+}
 .nav ul li a {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  padding: 0 26px;
+  background: rgba(14, 29, 38, 0.6);
   color: #fff;
   display: flex;
   align-items: center;
-  height: 100%;
-  width: 100%;
   transition: 0.4s;
 }
-.nav ul li:first-child {
-  padding-left: calc((100vw - 1216px) / 2);
-}
-.nav ul li:last-child {
-  flex-basis: 70%;
-}
-.nav ul li:hover {
+.nav ul li a.active {
   background: transparent;
-}
-.nav ul li:hover a {
   color: #52bbff;
-  position: relative;
 }
-.nav ul li:hover a::after {
+.nav ul li a.active::after {
   position: absolute;
   content: "";
   background: #52bbff;
@@ -108,8 +106,21 @@ h3 {
   left: 50%;
   transform: translateX(-50%);
 }
-.nav ul li:hover a.last::after {
-  left: 4%;
+.nav ul li a.active.first::after {
+  left: 75%;
+}
+.nav ul li a.active.last::after {
+  left: 7%;
+}
+.nav ul li a:last-child {
+  flex-basis: 100%;
+}
+.nav ul li.active {
+  background: transparent;
+}
+.nav ul li.active a {
+  color: #52bbff;
+  position: relative;
 }
 
 .header {
