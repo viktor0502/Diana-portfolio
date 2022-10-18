@@ -54,20 +54,47 @@ h3 {
 }
 
 .nav {
+  position: fixed;
+  z-index: 100;
   background: #21313e;
+  width: 100%;
 }
 .nav ul {
   display: flex;
   align-items: center;
-  gap: 52px;
   height: 125px;
+  width: 100%;
+}
+.nav ul li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 26px;
+  font-size: 20px;
+  line-height: 24px;
+  flex-shrink: 0;
 }
 .nav ul li a {
   color: #fff;
 }
+.nav ul li:first-child {
+  padding-left: calc((100vw - 1216px) / 2);
+}
+.nav ul li:last-child {
+  flex-basis: 70%;
+}
+.nav ul li.active {
+  background: rgba(13, 87, 135, 0.6);
+}
+.nav ul li.active:last-child {
+  background: linear-gradient(89.96deg, #18608E 38.59%, #185A86 50.51%, #1A394F 69.09%, #1B2B37 84.87%);
+}
+.nav ul li.active a {
+  color: #52bbff;
+}
 
 .header {
-  padding: 85px 0 151px 0;
+  padding: 210px 0 151px 0;
   background-image: url(./img/header-shape.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -187,6 +214,8 @@ h3 {
   align-items: flex-start;
   flex-direction: column;
   position: relative;
+}
+.about ul li:not(:last-child) {
   border-bottom: 1px solid rgba(205, 234, 252, 0.1);
   padding-bottom: 32px;
 }

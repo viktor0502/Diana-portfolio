@@ -4,6 +4,7 @@ $seconady: rgba(14, 29, 38, 0.6);
 $other: rgba(13, 87, 135, 0.6);
 $blue: #52bbff;
 $blue-light: #a5dcff;
+$container: 1216px;
 body {
     box-sizing: border-box;
     font-family: "Jura", sans-serif;
@@ -14,7 +15,7 @@ body {
     background: $primary;
 }
 .container {
-    max-width: 1216px;
+    max-width: $container;
     margin: 0 auto;
 }
 a {
@@ -53,21 +54,46 @@ h3 {
     border-radius: 100px;
 }
 .nav {
+    position: fixed;
+    z-index: 100;
     background: $primary;
+    width: 100%;
     ul {
         display: flex;
         align-items: center;
-        gap: 52px;
         height: 125px;
+        width: 100%;
         li {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 26px;
+            font-size: 20px;
+            line-height: 24px;
+            flex-shrink: 0;
             a {
                 color: #fff;
+            }
+            &:first-child {
+                padding-left: calc((100vw - $container) / 2);
+            }
+            &:last-child{
+                flex-basis: 70%;
+            }
+            &.active{
+                background: $other;
+                &:last-child{
+                    background: linear-gradient(89.96deg, #18608E 38.59%, #185A86 50.51%, #1A394F 69.09%, #1B2B37 84.87%);
+                }
+                a{
+                    color: $blue;
+                }
             }
         }
     }
 }
 .header {
-    padding: 85px 0 151px 0;
+    padding: 210px 0 151px 0;
     background-image: url(./img/header-shape.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -83,7 +109,7 @@ h3 {
                 font-size: 65px;
                 line-height: 77px;
                 position: relative;
-                &::after{
+                &::after {
                     position: absolute;
                     content: url(./img/icon/star.svg);
                     right: 80px;
@@ -188,8 +214,10 @@ h3 {
             align-items: flex-start;
             flex-direction: column;
             position: relative;
-            border-bottom: 1px solid rgba(205, 234, 252, 0.1);
-            padding-bottom: 32px;
+            &:not(:last-child) {
+                border-bottom: 1px solid rgba(205, 234, 252, 0.1);
+                padding-bottom: 32px;
+            }
             &::before {
                 content: url(./img/icon/star-list.svg);
                 position: absolute;
@@ -224,7 +252,7 @@ h3 {
         h2 {
             position: relative;
             max-width: 620px;
-            &::after{
+            &::after {
                 position: absolute;
                 content: url(./img/icon/star.svg);
                 right: 40px;
@@ -247,10 +275,7 @@ h3 {
                 line-height: 59px;
                 color: $blue-light;
             }
-            .tg-block {
-            }
-            .mail-block {
-            }
+            
         }
     }
 }
