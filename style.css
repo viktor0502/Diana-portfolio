@@ -257,14 +257,14 @@ h3 {
   line-height: 17px;
   padding: 10px 22px;
   border-radius: 100px;
-  background: #52bbff;
+  background: rgba(14, 29, 38, 0.6);
 }
 
 .about {
   padding-top: 119px;
   background-image: url(./img/contacts-shape.png);
   background-size: contain;
-  background-position: bottom left;
+  background-position: bottom right;
   background-repeat: no-repeat;
 }
 .about h2 {
