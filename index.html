@@ -20,12 +20,23 @@
   <body>
     <nav class="nav">
       <div class="container">
-        <ul>
-          <li><a class="active first" href="#about-me">ОБО МНЕ</a></li>
-          <li><a href="#services">УСЛУГИ</a></li>
-          <li><a href="#portfolio">РАБОТЫ</a></li>
-          <li><a class="last" href="#contacts">КОНТАКТЫ</a></li>
-        </ul>
+        <div class="burger-btn">
+          <span></span>
+        </div>
+        <div class="navbar-menu-wrapper">
+          <ul class="navbar-menu">
+            <li class="nav-link"><a href="#about-me">ОБО МНЕ</a></li>
+            <li class="nav-link"><a href="#services">УСЛУГИ</a></li>
+            <li class="nav-link"><a href="#portfolio">РАБОТЫ</a></li>
+            <li class="nav-link"><a href="#contacts">КОНТАКТЫ</a></li>
+          </ul>
+          <div class="navbar-links">
+            <a href="#"><img src="img/icon/tg.svg" alt="tg" /></a>
+            <a href="#"
+              ><img src="img/icon/mail-outline.svg" alt="mail-block"
+            /></a>
+          </div>
+        </div>
       </div>
     </nav>
     <header id="about-me" class="header">
@@ -49,9 +60,13 @@
               ></span>
             </div>
           </div>
-          <div class="header__photo">
-            <img src="./img/header-photo.png" alt="header__photo" />
-          </div>
+          <!-- <div> -->
+          <img
+            class="header__photo"
+            src="./img/header-photo.png"
+            alt="header__photo"
+          />
+          <!-- </div> -->
         </div>
       </div>
       <div id="services" class="tech-skills">
@@ -98,413 +113,59 @@
     </header>
     <section id="portfolio" class="portfolio">
       <div class="container">
-        <div class="wrapper-title">
-          <h2>МОИ РАБОТЫ</h2>
-          <div class="currtab">Все</div>
-          <ul id="tabs" class="tabs-wrapper">
-            <li class="tab-btn active">Все</li>
-            <li class="tab-btn">Продуктовый дизайн</li>
-            <li class="tab-btn">UX исследования</li>
-            <li class="tab-btn">Графический дизайн</li>
-          </ul>
-        </div>
-        <div class="swiper active">
+        <h2>МОИ РАБОТЫ</h2>
+      </div>
+      <div class="container-right">
+        <div class="swiper-portfolio">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="portfolio-item" data-btn="genius">
+            <div class="swiper-slide" data-btn-popup="genius-site">
+              <div class="portfolio-item">
                 <div class="item-img">
                   <img src="./img/empowering.jpg" alt="empowering" />
                 </div>
                 <div class="title">
                   <p>Genius Academy</p>
-                  <div class="links">
-                    <span class="category">Продуктовый дизайн</span>
-                    <a href="#"
-                      ><img src="./img/icon/arrow-right.svg" alt=""
-                    /></a>
-                  </div>
+                  <span class="category">Подробнее</span>
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide" data-btn-popup="live-events">
               <div class="portfolio-item">
-                <div class="item-img">
-                  <img src="./img/custom-oil.png" alt="custom-oil" />
-                </div>
-                <div class="title">
-                  <p>Интернет-магазин “Ремесленное масло”</p>
-                  <div class="links">
-                    <span class="category">Продуктовый дизайн</span>
-                    <a href="#"
-                      ><img src="./img/icon/arrow-right.svg" alt=""
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="portfolio-item">
-                <div class="item-img">
-                  <img src="./img/migrants.png" alt="migrants" />
-                </div>
-                <div class="title">
-                  <p>Проект “Мигрнаты”</p>
-                  <div class="links">
-                    <span class="category">Продуктовый дизайн</span>
-                    <a href="#"
-                      ><img src="./img/icon/arrow-right.svg" alt=""
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="portfolio-item" data-btn="live-events">
                 <div class="item-img">
                   <img src="./img/live-events.png" alt="live-events" />
                 </div>
                 <div class="title">
                   <p>Live events 3.0</p>
-                  <div class="links">
-                    <span class="category">Продуктовый дизайн</span>
-                    <a href="#"
-                      ><img src="./img/icon/arrow-right.svg" alt=""
-                    /></a>
-                  </div>
+                  <span class="category">Подробнее</span>
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="portfolio-item" data-btn="program-popup">
+            <div class="swiper-slide" data-btn-popup="program-site">
+              <div class="portfolio-item">
                 <div class="item-img">
                   <img src="./img/programm.png" alt="programm" />
                 </div>
                 <div class="title">
                   <p>Интернет-магазин Программное обеспечение</p>
-                  <div class="links">
-                    <span class="category">Продуктовый дизайн</span>
-                    <a href="#"
-                      ><img src="./img/icon/arrow-right.svg" alt=""
-                    /></a>
-                  </div>
+                  <span class="category">Подробнее</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" data-btn-popup="program-site">
+              <div class="portfolio-item">
+                <div class="item-img">
+                  <img src="./img/custom-oil.png" alt="programm" />
+                </div>
+                <div class="title">
+                  <p>Интернет-магазин Программное обеспечение</p>
+                  <span class="category">Подробнее</span>
                 </div>
               </div>
             </div>
           </div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="portfolio-item">
-                <div class="item-img">
-                  <img src="./img/empowering.jpg" alt="empowering" />
-                </div>
-                <div class="title">
-                  <p>Genius Academy</p>
-                  <div class="links">
-                    <span class="category">Продуктовый дизайн</span>
-                    <a href="#"
-                      ><img src="./img/icon/arrow-right.svg" alt=""
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="portfolio-item">
-                <div class="item-img">
-                  <img src="./img/empowering.jpg" alt="empowering" />
-                </div>
-                <div class="title">
-                  <p>Genius Academy</p>
-                  <div class="links">
-                    <span class="category">Продуктовый дизайн</span>
-                    <a href="#"
-                      ><img src="./img/icon/arrow-right.svg" alt=""
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="portfolio-item">
-                <div class="item-img">
-                  <img src="./img/empowering.jpg" alt="empowering" />
-                </div>
-                <div class="title">
-                  <p>Genius Academy</p>
-                  <div class="links">
-                    <span class="category">Продуктовый дизайн</span>
-                    <a href="#"
-                      ><img src="./img/icon/arrow-right.svg" alt=""
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="portfolio-item">
-                <div class="item-img">
-                  <img src="./img/empowering.jpg" alt="empowering" />
-                </div>
-                <div class="title">
-                  <p>Genius Academy</p>
-                  <div class="links">
-                    <span class="category">Продуктовый дизайн</span>
-                    <a href="#"
-                      ><img src="./img/icon/arrow-right.svg" alt=""
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="portfolio-item">
-                <div class="item-img">
-                  <img src="./img/empowering.jpg" alt="empowering" />
-                </div>
-                <div class="title">
-                  <p>Genius Academy</p>
-                  <div class="links">
-                    <span class="category">Продуктовый дизайн</span>
-                    <a href="#"
-                      ><img src="./img/icon/arrow-right.svg" alt=""
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="portfolio-item">
-                <div class="item-img">
-                  <img src="./img/empowering.jpg" alt="empowering" />
-                </div>
-                <div class="title">
-                  <p>Genius Academy</p>
-                  <div class="links">
-                    <span class="category">Продуктовый дизайн</span>
-                    <a href="#"
-                      ><img src="./img/icon/arrow-right.svg" alt=""
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="portfolio-item">
-                <div class="item-img">
-                  <img src="./img/empowering.jpg" alt="empowering" />
-                </div>
-                <div class="title">
-                  <p>Genius Academy</p>
-                  <div class="links">
-                    <span class="category">Продуктовый дизайн</span>
-                    <a href="#"
-                      ><img src="./img/icon/arrow-right.svg" alt=""
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="portfolio-item">
-                <div class="item-img">
-                  <img src="./img/empowering.jpg" alt="empowering" />
-                </div>
-                <div class="title">
-                  <p>Genius Academy</p>
-                  <div class="links">
-                    <span class="category">Продуктовый дизайн</span>
-                    <a href="#"
-                      ><img src="./img/icon/arrow-right.svg" alt=""
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="portfolio-item">
-                <div class="item-img">
-                  <img src="./img/empowering.jpg" alt="empowering" />
-                </div>
-                <div class="title">
-                  <p>Genius Academy</p>
-                  <div class="links">
-                    <span class="category">Продуктовый дизайн</span>
-                    <a href="#"
-                      ><img src="./img/icon/arrow-right.svg" alt=""
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="portfolio-item">
-                <div class="item-img">
-                  <img src="./img/empowering.jpg" alt="empowering" />
-                </div>
-                <div class="title">
-                  <p>Genius Academy</p>
-                  <div class="links">
-                    <span class="category">Продуктовый дизайн</span>
-                    <a href="#"
-                      ><img src="./img/icon/arrow-right.svg" alt=""
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="portfolio-item">
-                <div class="item-img">
-                  <img src="./img/empowering.jpg" alt="empowering" />
-                </div>
-                <div class="title">
-                  <p>Genius Academy</p>
-                  <div class="links">
-                    <span class="category">Продуктовый дизайн</span>
-                    <a href="#"
-                      ><img src="./img/icon/arrow-right.svg" alt=""
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="portfolio-item">
-                <div class="item-img">
-                  <img src="./img/empowering.jpg" alt="empowering" />
-                </div>
-                <div class="title">
-                  <p>Genius Academy</p>
-                  <div class="links">
-                    <span class="category">Продуктовый дизайн</span>
-                    <a href="#"
-                      ><img src="./img/icon/arrow-right.svg" alt=""
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="portfolio-item">
-                <div class="item-img">
-                  <img src="./img/empowering.jpg" alt="empowering" />
-                </div>
-                <div class="title">
-                  <p>Genius Academy</p>
-                  <div class="links">
-                    <span class="category">Продуктовый дизайн</span>
-                    <a href="#"
-                      ><img src="./img/icon/arrow-right.svg" alt=""
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="portfolio-item">
-                <div class="item-img">
-                  <img src="./img/empowering.jpg" alt="empowering" />
-                </div>
-                <div class="title">
-                  <p>Genius Academy</p>
-                  <div class="links">
-                    <span class="category">Продуктовый дизайн</span>
-                    <a href="#"
-                      ><img src="./img/icon/arrow-right.svg" alt=""
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="portfolio-item">
-                <div class="item-img">
-                  <img src="./img/empowering.jpg" alt="empowering" />
-                </div>
-                <div class="title">
-                  <p>Genius Academy</p>
-                  <div class="links">
-                    <span class="category">Продуктовый дизайн</span>
-                    <a href="#"
-                      ><img src="./img/icon/arrow-right.svg" alt=""
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="portfolio-item">
-                <div class="item-img">
-                  <img src="./img/empowering.jpg" alt="empowering" />
-                </div>
-                <div class="title">
-                  <p>Genius Academy</p>
-                  <div class="links">
-                    <span class="category">Продуктовый дизайн</span>
-                    <a href="#"
-                      ><img src="./img/icon/arrow-right.svg" alt=""
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="portfolio-item">
-                <div class="item-img">
-                  <img src="./img/empowering.jpg" alt="empowering" />
-                </div>
-                <div class="title">
-                  <p>Genius Academy</p>
-                  <div class="links">
-                    <span class="category">Продуктовый дизайн</span>
-                    <a href="#"
-                      ><img src="./img/icon/arrow-right.svg" alt=""
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="portfolio-item">
-                <div class="item-img">
-                  <img src="./img/empowering.jpg" alt="empowering" />
-                </div>
-                <div class="title">
-                  <p>Genius Academy</p>
-                  <div class="links">
-                    <span class="category">Продуктовый дизайн</span>
-                    <a href="#"
-                      ><img src="./img/icon/arrow-right.svg" alt=""
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
         </div>
       </div>
+      <div class="swiper-pagination"></div>
     </section>
     <section class="about">
       <div class="container">
@@ -554,168 +215,149 @@
       </section>
     </section>
     <!-- Popups -->
-    <div data-popup="program-popup" class="popup">
-      <div class="popup__body">
-        <div class="popup__content program-popup">
-          <div class="popup-container">
-            <span class="close-icon"
-              ><img src="./img/icon/close.svg" alt="close"
-            /></span>
-            <div class="popup__content-title">
-              <span class="category">Продуктовый дизайн</span>
-              <h2>Интернет-магазин “Программное обеспечение”</h2>
-              <ul class="about-project-list">
-                <li class="about-project-item">
-                  <h4 class="title">О проекте</h4>
-                  <p>Интернет-магазин по программному обеспечению.</p>
-                </li>
-                <li class="about-project-item">
-                  <h4 class="title">Задача</h4>
-                  <p>
-                    Разработать 3 блока главной страницы: главный баннер,
-                    преимущества и каталог. Разработать страницу товара. Сделать
-                    адаптив под мобильную версию
-                  </p>
-                  <p>
-                    Дизайн необхожимо было сделать в стиле неоморфизма. Были
-                    самостоятельно подобраны цвета, прорисованы иллюстрации и
-                    преложены идеи о улучшению страницы товара.
-                  </p>
-                  <p>
-                    Текущий сайт, который нужно было обновить:
-                    <a class="popup-link" href="#" target="_blank"
-                      >keys-soft.ru</a
-                    >
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <div class="images">
-              <img
-                src="./img/program-site/1.png"
-                alt="program-site"
-                class="images-1"
-              />
-              <img
-                src="./img/program-site/2.png"
-                alt="program-site"
-                class="images-2"
-              />
-              <img
-                src="./img/program-site/3.png"
-                alt="program-site"
-                class="images-3"
-              />
-              <img
-                src="./img/program-site/4.png"
-                alt="program-site"
-                class="images-4"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div data-popup="genius" class="popup">
-      <div class="popup__body">
-        <div class="popup__content genius-popup">
-          <div class="popup-container">
-            <span class="close-icon"
-              ><img src="./img/icon/close.svg" alt="close"
-            /></span>
-            <div class="popup__content-title">
-              <span class="category">Продуктовый дизайн</span>
-              <h2>Genius Academy</h2>
-              <ul class="about-project-list">
-                <li class="about-project-item">
-                  <h4 class="title">О проекте</h4>
-                  <p>
-                    Проект “Genius Academy” является дополнительным продуктом
-                    платформы
-                    <a class="popup-link" href="#" target="_blank"
-                      >geniusyield</a
-                    >. Это академия, которая направления на получение информации
-                    для понимания и использования мира Web3 и DeFi.
-                  </p>
-                </li>
-                <li class="about-project-item">
-                  <h4 class="title">Задача</h4>
-                  <p>
-                    Подготовить проект под названием “Genius Academy” в качестве
-                    Landing Page. В проекте требовалась отрисовать страницу по
-                    уже готовому тексту.
-                  </p>
-                </li>
-              </ul>
-              <div class="popup-images">
-                <h3>Иллюстрации</h3>
-                <div class="popup-illustrations">
-                  <img
-                    src="img/genius-site/illustration1.png"
-                    alt="illustration"
-                  />
-                  <img
-                    src="img/genius-site/illustration2.png"
-                    alt="illustration"
-                  />
-                  <img
-                    src="img/genius-site/illustration3.png"
-                    alt="illustration"
-                  />
-                </div>
-                <h3>Дизайн</h3>
+    <div class="popup" data-popup="genius-site">
+      <div class="popup__content">
+        <img class="popup__close" src="./img/icon/close.svg" alt="close" />
+        <div class="popup-container">
+          <div class="popup__content-title">
+            <span class="category">Продуктовый дизайн</span>
+            <h2>Genius Academy</h2>
+            <ul class="about-project-list">
+              <li class="about-project-item">
+                <h4 class="title">О проекте</h4>
+                <p>
+                  Проект “Genius Academy” является дополнительным продуктом
+                  платформы
+                  <a class="popup-link" href="https://www.geniusyield.co/" target="_blank">geniusyield</a
+                  >. Это академия, которая направления на получение информации
+                  для понимания и использования мира Web3 и DeFi.
+                </p>
+              </li>
+              <li class="about-project-item">
+                <h4 class="title">Задача</h4>
+                <p>
+                  Подготовить проект под названием “Genius Academy” в качестве
+                  Landing Page. В проекте требовалась отрисовать страницу по уже
+                  готовому тексту.
+                </p>
+              </li>
+            </ul>
+            <div class="popup-images">
+              <h3>Иллюстрации</h3>
+              <div class="popup-illustrations">
+                <img
+                  src="img/genius-site/illustration1.png"
+                  alt="illustration"
+                />
+                <img
+                  src="img/genius-site/illustration2.png"
+                  alt="illustration"
+                />
+                <img
+                  src="img/genius-site/illustration3.png"
+                  alt="illustration"
+                />
               </div>
+              <h3>Дизайн</h3>
             </div>
-          </div>
-          <div class="popup-design">
-            <img src="img/genius-site/group.png" alt="" />
-            <!-- <img class="popup-design-img1" src="img/genius-site/img1.png" alt="img">
-            <img class="popup-design-img2" src="img/genius-site/img2.png" alt="img">
-            <img class="popup-design-img3" src="img/genius-site/img3.png" alt="img">
-            <img class="popup-design-img4" src="img/genius-site/img4.png" alt="img">
-            <img class="popup-design-img5" src="img/genius-site/img5.png" alt="img"> -->
+            <div class="popup-design">
+              <img src="img/genius-site/group.png" alt="" />
+              <!-- <img class="popup-design-img1" src="img/genius-site/img1.png" alt="img">
+              <img class="popup-design-img2" src="img/genius-site/img2.png" alt="img">
+              <img class="popup-design-img3" src="img/genius-site/img3.png" alt="img">
+              <img class="popup-design-img4" src="img/genius-site/img4.png" alt="img">
+              <img class="popup-design-img5" src="img/genius-site/img5.png" alt="img"> -->
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div data-popup="live-events" class="popup">
-      <div class="popup__body">
-        <div class="popup__content live-events">
-          <div class="popup-container">
-            <span class="close-icon"
-              ><img src="./img/icon/close.svg" alt="close"
-            /></span>
-            <div class="popup__content-title">
-              <span class="category">Продуктовый дизайн</span>
-              <h2>Live events 3.0</h2>
-              <ul class="about-project-list">
-                <li class="about-project-item">
-                  <h4 class="title">О проекте</h4>
-                  <p>
-                    Платформа, которая позволяет окнуться в цифровой мир и
-                    побывать онлайн на любом мероприятии
-                  </p>
-                </li>
-                <li class="about-project-item">
-                  <h4 class="title">Задача</h4>
-                  <p>
-                    Разработать лендинг “Meta Show”. Обязательное наличие
-                    3д-иллюстраций, которые дают понять пользователю сразу о
-                    способе побывать в другой реальности.
-                  </p>
-                </li>
-              </ul>
-            </div>
+    <div class="popup program-site" data-popup="program-site">
+      <div class="popup__content">
+        <img class="popup__close" src="./img/icon/close.svg" alt="close" />
+        <div class="popup-container">
+          <div class="popup__content-title">
+            <span class="category">Продуктовый дизайн</span>
+            <h2>Интернет-магазин “Программное обеспечение”</h2>
+            <ul class="about-project-list">
+              <li class="about-project-item">
+                <h4 class="title">О проекте</h4>
+                <p>Интернет-магазин по программному обеспечению.</p>
+              </li>
+              <li class="about-project-item">
+                <h4 class="title">Задача</h4>
+                <p>
+                  Разработать 3 блока главной страницы: главный баннер,
+                  преимущества и каталог. Разработать страницу товара. Сделать
+                  адаптив под мобильную версию
+                </p>
+                <p>
+                  Дизайн необхожимо было сделать в стиле неоморфизма. Были
+                  самостоятельно подобраны цвета, прорисованы иллюстрации и
+                  преложены идеи о улучшению страницы товара.
+                </p>
+                <p>
+                  Текущий сайт, который нужно было обновить:
+                  <a class="popup-link" href="keys-soft.ru" target="_blank"
+                    >keys-soft.ru</a
+                  >
+                </p>
+              </li>
+            </ul>
           </div>
           <div class="images">
-            <img src="img/Live-events/bg.png" alt="" />
+            <img src="./img/program-site/1.png" alt="program-site" />
+            <img src="./img/program-site/2.png" alt="program-site" />
+            <img src="./img/program-site/3.png" alt="program-site" />
+            <img src="./img/program-site/4.png" alt="program-site" />
+          </div>
+          <div class="img-mobile">
+            <img src="img/program-site/img_mobile/1.png" alt="" />
+            <div class="wrapper">
+              <img src="img/program-site/img_mobile/2.png" alt="" />
+              <img src="img/program-site/img_mobile/3.png" alt="" />
+              <img src="img/program-site/img_mobile/4.png" alt="" />
+              <img src="img/program-site/img_mobile/5.png" alt="" />
+            </div>
+            <img src="img/program-site/img_mobile/6.png" alt="" />
           </div>
         </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="js/tabs.js"></script>
-    <script src="js/slider.js"></script>
+    <div class="popup" data-popup="live-events">
+      <div class="popup__content">
+        <img class="popup__close" src="./img/icon/close.svg" alt="close" />
+        <div class="popup-container">
+          <div class="popup__content-title">
+            <span class="category">Продуктовый дизайн</span>
+            <h2>Live events 3.0</h2>
+            <ul class="about-project-list">
+              <li class="about-project-item">
+                <h4 class="title">О проекте</h4>
+                <p>
+                  Платформа, которая позволяет окнуться в цифровой мир и
+                  побывать онлайн на любом мероприятии
+                </p>
+              </li>
+              <li class="about-project-item">
+                <h4 class="title">Задача</h4>
+                <p>
+                  Разработать лендинг “Meta Show”. Обязательное наличие
+                  3д-иллюстраций, которые дают понять пользователю сразу о
+                  способе побывать в другой реальности.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <img src="img/Live-events/bg.png" alt="" />
+      </div>
+    </div>
+
+    <!-- <script src="js/navigation.js"></script> -->
+    <script src="js/burger.js"></script>
     <script src="js/popup.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>
