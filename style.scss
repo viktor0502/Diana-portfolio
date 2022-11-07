@@ -173,7 +173,6 @@ h3 {
         .header__photo {
             width: 432px;
             max-height: 846px;
-            // width: 30vw;
             position: absolute;
             right: 0px;
             bottom: -45%;
@@ -882,18 +881,14 @@ h3 {
     .header {
         .wrapper {
             .header__photo {
-                width: 162px;
+                width: 300px ;
                 bottom: 0;
-                top: 50%;
+                top: 0%;
             }
             .title {
-                max-width: 340px;
+                max-width: 400px;
                 h1 {
-                    font-size: 32px !important;
-                    margin-top: 0px;
-                    &::after {
-                        right: 0;
-                    }
+                    font-size: 38px !important;
                 }
             }
         }
@@ -950,6 +945,7 @@ h3 {
         width: 0%;
         height: 100%;
         background: rgba(14, 29, 38, 0.6);
+        -webkit-backdrop-filter: blur(12.5px);
         backdrop-filter: blur(12.5px);
         z-index: 100;
         -webkit-transition: $transition;
@@ -984,6 +980,49 @@ h3 {
         background-image: none;
     }
 }
+
+@media (max-width: 648px) {
+    .header {
+        .wrapper {
+            .header__photo {
+                width: 200px ;
+                bottom: 0;
+                top: 50%;
+            }
+            .title {
+                max-width: 400px;
+                h1 {
+                    font-size: 38px !important;
+                    &::after{
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 484px) {
+    .header {
+        .wrapper {
+            .header__photo {
+                width: 162px;
+                bottom: 0;
+                top: 50%;
+            }
+            .title {
+                max-width: 340px;
+                h1 {
+                    font-size: 32px !important;
+                    margin-top: 0px;
+                    &::after {
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 362px) {
     .header {
         .wrapper {
