@@ -118,6 +118,7 @@ h3 {
                 line-height: 24px;
                 a {
                     color: #fff;
+                    -webkit-transition: $transition;
                     transition: $transition;
                     &:hover {
                         background: transparent;
@@ -845,10 +846,10 @@ h3 {
         }
     }
     .program-site {
-        .popup__content{
+        .popup__content {
             background-position: 0% 110% !important;
             background-size: contain;
-            .about-project-item{
+            .about-project-item {
                 max-width: unset !important;
             }
         }
@@ -903,6 +904,7 @@ h3 {
         position: relative;
         overflow: hidden;
         background: linear-gradient(180deg, rgba(27, 43, 55, 0.44) 0%, rgba(27, 43, 55, 0) 100%);
+        -webkit-backdrop-filter: blur(18px);
         backdrop-filter: blur(18px);
         .sub-title {
             max-width: 100% !important;
@@ -950,6 +952,7 @@ h3 {
         background: rgba(14, 29, 38, 0.6);
         backdrop-filter: blur(12.5px);
         z-index: 100;
+        -webkit-transition: $transition;
         transition: $transition;
         opacity: 0;
         display: flex;
