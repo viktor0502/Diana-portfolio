@@ -908,7 +908,8 @@ h3 {
             flex-direction: column;
             .item {
                 flex-direction: row !important;
-                justify-content: center !important;
+                justify-content: unset !important;
+                padding: 26px 15% !important;
             }
         }
         .techskills-list {

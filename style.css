@@ -858,7 +858,8 @@ h3 {
   }
   .tech-skills .items .item {
     flex-direction: row !important;
-    justify-content: center !important;
+    justify-content: unset !important;
+    padding: 26px 15% !important;
   }
   .tech-skills .techskills-list {
     gap: 16px !important;
